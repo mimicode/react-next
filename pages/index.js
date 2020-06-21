@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Zhangleitao from '../components/Zhangleitao'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -7,6 +9,12 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Zhangleitao>
+        <h1>我是children</h1>
+        <Link href="/list"><a>进入列表页</a></Link>
+      </Zhangleitao>
+
 
       <main>
         <h1 className="title">
