@@ -3,6 +3,7 @@ import Axios from "axios"
 // import dynamic from "next/dynamic"
 import {Button} from "antd"
 import { useState } from "react"
+import Head from "next/head"
 // import 'antd/dist/antd.css'
 export default ({list})=>{
     console.log("list",list)
@@ -12,7 +13,11 @@ export default ({list})=>{
     const [time,setTime]  = useState(Date.now())
 
     return (
-        <div>
+        <>
+        <Head>
+            <title>文章列表</title>
+        </Head>
+            <div>
            <h2>
                <Link href="/">
                   <a>返回首页</a>
@@ -62,6 +67,8 @@ export default ({list})=>{
 
         </div>
         
+        </>
+    
     )
 }
 
